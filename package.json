@@ -2,8 +2,8 @@
     "name": "monorepo-example",
     "version": "1.0.0",
     "description": "Example yarn workspace",
-    "main": "backend/server.js",
-    "repository": "git@github.com:Romkin7/yelpCamp-mern.git",
+    "main": "packages/component-library/build/index.js",
+    "repository": "https://github.com/Romkin7/monorepo-example",
     "author": "Roman Tuomisto",
     "workspaces": [
         "packages/*"
