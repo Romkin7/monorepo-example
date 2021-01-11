@@ -34,8 +34,8 @@
         "proseWrap": "always"
     },
     "scripts": {
-        "start:project1": "cd packages/project1 && yarn start",
-        "start:project2": "cd packages/project2 && yarn start",
-       "start": "concurrently \"yarn start:project1\" \"yarn start:project2\""
+        "start:test-app": "cd packages/test-app && yarn start",
+        "start:component-library": "cd packages/component-library && yarn start",
+        "start": "concurrently \"yarn start:test-app\" \"yarn start:component-library\""
     }
 }
