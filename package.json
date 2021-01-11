@@ -1,0 +1,41 @@
+{
+    "name": "monorepo-example",
+    "version": "1.0.0",
+    "description": "Example yarn workspace",
+    "main": "backend/server.js",
+    "repository": "git@github.com:Romkin7/yelpCamp-mern.git",
+    "author": "Roman Tuomisto",
+    "workspaces": [
+        "packages/*"
+      ],
+    "license": "MIT",
+    "private": false,
+    "engines": {
+        "node": ">=12.*",
+        "yarn": ">=1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn lint",
+            "pre-push": "yarn lint"
+        }
+    },
+    "lint-staged": {
+        "*.{tsx,ts,js,scss}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "proseWrap": "always"
+    },
+    "scripts": {
+        "start:project1": "cd packages/project1 && yarn start",
+        "start:project2": "cd packages/project2 && yarn start",
+       "start": "concurrently \"yarn start:project1\" \"yarn start:project2\""
+    }
+}
